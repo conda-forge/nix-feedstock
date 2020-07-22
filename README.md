@@ -5,7 +5,7 @@ Home: https://nixos.org/nix/
 
 Package license: LGPL-2.1-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: The Purely Functional Package Manager
 
