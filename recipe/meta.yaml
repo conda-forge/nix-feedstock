@@ -10,7 +10,7 @@ source:
   sha256: 37e3310a55fde1e50e7d4321d29b9180d1e9d7af9c8d211db6a667e6ee4eb410
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   ignore_run_exports:
     - libxslt
