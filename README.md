@@ -19,7 +19,6 @@ atomic upgrades and rollbacks, side-by-side installation of multiple
 versions of a package, multi-user package management and easy setup
 of build environments.
 
-
 Current build status
 ====================
 
