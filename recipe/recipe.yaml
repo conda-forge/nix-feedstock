@@ -1,26 +1,26 @@
-{% set name = "nix" %}
-{% set version = "2.3.16" %}
+schema_version: 1
+
+context:
+  name: nix
+  version: 2.3.16
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://nixos.org/releases/nix/nix-{{ version }}/nix-{{ version }}.tar.xz
+  url: https://nixos.org/releases/nix/nix-${{ version }}/nix-${{ version }}.tar.xz
   sha256: 7ee681b69f05b525492d202c3bedcd9dee1960bb818f62690f6c4493b7c2aabc
 
 build:
-  number: 4
-  skip: true  # [win]
-  ignore_run_exports:
-    - libxslt
-    - libxml2
+  number: 5
+  skip: win
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
-    - {{ compiler('cxx') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
     - pkg-config
     - make
   host:
@@ -36,21 +36,24 @@ requirements:
     - libxslt
     - bison
     - flex
-    - libseccomp  # [linux]
+    - if: linux
+      then: libseccomp
   run:
     - brotli
     - libcurl
     - curl
     - editline
+  ignore_run_exports:
+    by_name:
+      - libxslt
+      - libxml2
 
-test:
-  commands:
-    - nix --help
+tests:
+  - script:
+      - nix --help
 
 about:
-  home: https://nixos.org/nix/
   license: LGPL-2.1-or-later
-  license_family: LGPL
   license_file: COPYING
   summary: The Purely Functional Package Manager
   description: |
@@ -59,8 +62,9 @@ about:
     atomic upgrades and rollbacks, side-by-side installation of multiple
     versions of a package, multi-user package management and easy setup
     of build environments.
-  doc_url: https://nixos.org/nix/manual/
-  dev_url: https://github.com/NixOS/nix
+  homepage: https://nixos.org/nix/
+  repository: https://github.com/NixOS/nix
+  documentation: https://nixos.org/nix/manual/
 
 extra:
   recipe-maintainers:
