@@ -27,7 +27,7 @@ requirements:
     - openssl
     - brotli
     - bzip2
-    - lzma-devel
+    - liblzma-devel
     - curl
     - sqlite
     - libboost-devel
@@ -36,6 +36,7 @@ requirements:
     - libxslt
     - bison
     - flex
+    - zlib
     - if: linux
       then: libseccomp
   run:
