@@ -15,6 +15,7 @@ source:
       - patches/0001-fix-functional-tests-depends-type.patch
       - patches/0002-guard-SYS_close_range-for-old-kernel-headers.patch
       - patches/0003-define-CLONE_NEWCGROUP-for-old-kernel-headers.patch
+      - patches/0004-define-new-mount-api-for-old-kernel-headers.patch
   - url: https://github.com/BLAKE3-team/BLAKE3/archive/refs/tags/1.8.5.tar.gz
     sha256: 220bd81286e2a0585beac66d41ac3f4c2c33ae8a4e339fc88cf22d5e00514fe9
     target_directory: blake3

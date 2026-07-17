@@ -1,0 +1,20 @@
+--- a/src/libstore/linux/build/linux-derivation-builder.cc
++++ b/src/libstore/linux/build/linux-derivation-builder.cc
+@@ -39,6 +39,17 @@
+ #define pivot_root(new_root, put_old) (syscall(SYS_pivot_root, new_root, put_old))
+ 
+ /* Polyfill for musl that doesn't have the syscall wrappers. */
++#ifndef __NR_open_tree
++#  define __NR_open_tree 428
++#endif
++
++#ifndef __NR_move_mount
++#  define __NR_move_mount 429
++#endif
++
++#ifndef AT_RECURSIVE
++#  define AT_RECURSIVE 0x8000
++#endif
+ 
+ #if !HAVE_OPEN_TREE
+ 
