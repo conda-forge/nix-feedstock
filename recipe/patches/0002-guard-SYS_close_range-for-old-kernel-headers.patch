@@ -1,6 +1,6 @@
 --- a/src/libutil/unix/file-descriptor.cc
 +++ b/src/libutil/unix/file-descriptor.cc
-@@ -79,7 +79,13 @@ static int unix_close_range(unsigned int first, unsigned int last, int flags)
+@@ -88,6 +88,12 @@ static int unix_close_range(unsigned int first, unsigned int last, int flags)
  {
  #  if !HAVE_CLOSE_RANGE
 +#    ifdef SYS_close_range

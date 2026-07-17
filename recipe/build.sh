@@ -63,7 +63,6 @@ export CXXFLAGS="${CXXFLAGS} -Wno-error=return-type"
 meson setup builddir \
     ${MESON_ARGS} \
     -Dunit-tests=false \
-    -Dbindings=false \
     -Ddoc-gen=false \
     -Dbenchmarks=false \
     -Djson-schema-checks=false
