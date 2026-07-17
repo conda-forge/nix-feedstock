@@ -1,7 +1,5 @@
 brotli:
 - '1.2'
-bzip2:
-- '1'
 c_compiler:
 - gcc
 c_compiler_version:
@@ -10,8 +8,6 @@ c_stdlib:
 - sysroot
 c_stdlib_version:
 - '2.17'
-cdt_name:
-- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -23,19 +19,23 @@ cxx_compiler:
 cxx_compiler_version:
 - '14'
 docker_image:
-- quay.io/condaforge/linux-anvil-x86_64:alma9
+- quay.io/condaforge/linux-anvil-x86_64:alma10
+libarchive:
+- '3.8'
 libboost_devel:
-- '1.90'
-libxml2:
-- '2.14'
+- '1.88'
+libgit2:
+- '1.9'
+libsodium:
+- 1.0.22
 openssl:
 - '3.5'
 sqlite:
 - '3'
 target_platform:
 - linux-aarch64
-xz:
-- '5'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
+zlib:
+- '1'
