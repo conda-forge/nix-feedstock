@@ -44,6 +44,7 @@ requirements:
     - libboost-devel
     - editline
     - zlib
+    - zstd
     - libarchive
     - libsodium
     - nlohmann_json
@@ -52,6 +53,9 @@ requirements:
     - toml11
     - if: linux
       then: libseccomp
+  ignore_run_exports:
+    from_package:
+      - zlib
   run:
     - brotli
     - libcurl
