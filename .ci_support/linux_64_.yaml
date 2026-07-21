@@ -23,7 +23,7 @@ docker_image:
 libarchive:
 - '3.8'
 libboost_devel:
-- '1.88'
+- '1.90'
 libgit2:
 - '1.9'
 libsodium:
