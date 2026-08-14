@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: nix
-  version: 2.35.1
+  version: "2.35.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://github.com/NixOS/nix/archive/refs/tags/${{ version }}.tar.gz
-    sha256: 030ca7a4945c81d01f870fa9feb28a863ae8f20ecafe010163847003760c396f
+    sha256: f71711db9831d1e58d0fccf01cf2db83315b58da00300334d214e4de90b1759e
     patches:
       - patches/0001-fix-functional-tests-depends-type.patch
       - patches/0002-guard-SYS_close_range-for-old-kernel-headers.patch
@@ -21,7 +21,7 @@ source:
     target_directory: blake3
 
 build:
-  number: 1
+  number: 0
   skip: win
 
 requirements:
