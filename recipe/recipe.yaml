@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: nix
-  version: "2.35.3"
+  version: "2.35.4"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://github.com/NixOS/nix/archive/refs/tags/${{ version }}.tar.gz
-    sha256: 7b2a14c23210017ce5c7a74945b58804c923981396b6c1d5e63ce523369626a6
+    sha256: 7d1dbc5d944eaf85e146f79ee1974082df438009f2ea0540d87b2aae228807bf
     patches:
       - patches/0001-fix-functional-tests-depends-type.patch
       - patches/0002-guard-SYS_close_range-for-old-kernel-headers.patch
